@@ -1,5 +1,3 @@
-call pathogen#infect()
-
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 set nocompatible
@@ -22,6 +20,47 @@ set smartcase                   " ... unless they contain at least one capital l
 
 "" Set region to US English
 set spelllang=en_us
+
+set rtp+=~/.vim/bundle/vundle/
+ call vundle#rc()
+
+ " let Vundle manage Vundle
+ " required! 
+ Bundle 'gmarik/vundle'
+
+ " My Bundles here:
+ "
+ " original repos on github
+ Bundle 'tpope/vim-fugitive'
+ Bundle 'tpope/vim-surround'
+ Bundle 'tpope/vim-unimpaired'
+ Bundle 'tpope/vim-commentary'
+ Bundle 'tpope/vim-endwise'
+ Bundle 'tpope/vim-ragtag'
+ Bundle 'tpope/vim-rails'
+ Bundle 'vim-ruby/vim-ruby'
+ Bundle 'mattn/gist-vim'
+ Bundle 'scrooloose/nerdtree'
+ Bundle 'msanders/snipmate.vim'
+ Bundle 'mileszs/ack.vim'
+ Bundle 'kikijump/tslime.vim'
+ Bundle 'jgdavey/vim-turbux'
+ Bundle 'rson/vim-conque'
+ Bundle 'altercation/vim-colors-solarized'
+ " vim-scripts repos
+ " non github repos
+ Bundle 'git://git.wincent.com/command-t.git'
+
+ filetype plugin indent on     " required! 
+ "
+ " Brief help
+ " :BundleList          - list configured bundles
+ " :BundleInstall(!)    - install(update) bundles
+ " :BundleSearch(!) foo - search(or refresh cache first) for foo
+ " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+ "
+ " see :h vundle for more details or wiki for FAQ
+ " NOTE: comments after Bundle command are not allowed..
 
 "" Keybindings 
 
