@@ -25,6 +25,11 @@ set spelllang=en_us
 set rtp+=~/.vim/bundle/vundle/
  call vundle#rc()
 
+" omni completion settings
+set ofu=syntaxcomplete#Complete
+let g:rubycomplete_buffer_loading = 0
+let g:rubycomplete_classes_in_global = 1
+
  " let Vundle manage Vundle
  " required! 
  Bundle 'gmarik/vundle'
