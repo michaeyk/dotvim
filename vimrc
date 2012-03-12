@@ -22,6 +22,9 @@ set smartcase                   " ... unless they contain at least one capital l
 "" Set region to US English
 set spelllang=en_us
 
+" colorsheme 
+colorscheme eddie
+
 set rtp+=~/.vim/bundle/vundle/
  call vundle#rc()
 
@@ -53,6 +56,7 @@ let g:rubycomplete_classes_in_global = 1
  Bundle 'jgdavey/vim-turbux'
  Bundle 'rson/vim-conque'
  Bundle 'altercation/vim-colors-solarized'
+ Bundle 'mattsa/vim-eddie'
  " vim-scripts repos
  " non github repos
  Bundle 'git://git.wincent.com/command-t.git'
