@@ -137,3 +137,5 @@ nmap <Leader>b <C-^>
 " ,sh shell window
 nmap <Leader>sh :ConqueTermSplit zsh<cr>
 
+map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
+
