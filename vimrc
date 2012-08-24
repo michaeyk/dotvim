@@ -66,6 +66,7 @@ let g:rubycomplete_classes_in_global = 1
  Bundle 'rson/vim-conque'
  Bundle 'altercation/vim-colors-solarized'
  Bundle 'mattsa/vim-eddie'
+ Bundle 'tsaleh/vim-align'
  " vim-scripts repos
  " non github repos
  Bundle 'git://git.wincent.com/command-t.git'
@@ -90,6 +91,11 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" Easy buffer switching
+map <S-j> :bn<CR> 
+map <S-k> :bp<CR> 
+
 " w!! to write as root
 cmap w!! w !sudo tee % >/dev/null
 
