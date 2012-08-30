@@ -96,6 +96,10 @@ map <C-l> <C-w>l
 map <S-j> :bn<CR> 
 map <S-k> :bp<CR> 
 
+" cnext / cprev
+map <f1> :cprev<CR>
+map <f2> :cnext<CR>
+
 " w!! to write as root
 cmap w!! w !sudo tee % >/dev/null
 
