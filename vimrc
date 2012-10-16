@@ -32,7 +32,7 @@ set statusline+=%10((%l,%c)%)\            " line and column
 set statusline+=%P                        " percentage of file
 
 " colorsheme 
-colorscheme eddie
+colorscheme ir_black
 
 set rtp+=~/.vim/bundle/vundle/
  call vundle#rc()
@@ -59,7 +59,6 @@ let g:rubycomplete_classes_in_global = 1
  Bundle 'vim-ruby/vim-ruby'
  Bundle 'mattn/gist-vim'
  Bundle 'scrooloose/nerdtree'
- Bundle 'msanders/snipmate.vim'
  Bundle 'mileszs/ack.vim'
  Bundle 'kikijump/tslime.vim'
  Bundle 'jgdavey/vim-turbux'
@@ -67,6 +66,15 @@ let g:rubycomplete_classes_in_global = 1
  Bundle 'altercation/vim-colors-solarized'
  Bundle 'mattsa/vim-eddie'
  Bundle 'tsaleh/vim-align'
+
+" snipmate 
+" Install dependencies:
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "honza/snipmate-snippets"
+
+Bundle "garbas/vim-snipmate"
+
  " vim-scripts repos
  " non github repos
  Bundle 'git://git.wincent.com/command-t.git'
@@ -132,6 +140,7 @@ nmap <leader>f :let @/="\\<<C-R><C-W>\\>"<CR>:set hls<CR>:silent Ggrep -w "<C-R>
 vmap <leader>f y:let @/=escape(@", '\\[]$^*.')<CR>:set hls<CR>:silent Ggrep -F "<C-R>=escape(@", '\\"#')<CR>"<CR>:ccl<CR>:cw<CR><CR>
 
 " nerdtree
+let g:NERDTreeDirArrows=0
 " Ctrl-P to Display the file browser tree
 nmap <C-P> :NERDTreeToggle<CR>
 " ,p to show current file in the tree
