@@ -1,5 +1,6 @@
 set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
+set number
 set nocompatible
 syntax enable
 set encoding=utf-8
@@ -58,9 +59,9 @@ let g:rubycomplete_classes_in_global = 1
  Bundle 'tpope/vim-rails'
  Bundle 'vim-ruby/vim-ruby'
  Bundle 'mattn/gist-vim'
- Bundle 'scrooloose/nerdtree'
+ " Bundle 'scrooloose/nerdtree'
  Bundle 'mileszs/ack.vim'
- Bundle 'kikijump/tslime.vim'
+ Bundle 'jgdavey/tslime.vim'
  Bundle 'jgdavey/vim-turbux'
  Bundle 'rson/vim-conque'
  Bundle 'altercation/vim-colors-solarized'
