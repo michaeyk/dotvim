@@ -68,6 +68,8 @@ let g:rubycomplete_classes_in_global = 1
  Bundle 'mattsa/vim-eddie'
  Bundle 'tsaleh/vim-align'
  Bundle 'kien/ctrlp.vim'
+ Bundle 'derekwyatt/vim-scala'
+
 
 " snipmate 
 " Install dependencies:
