@@ -7,7 +7,9 @@ syntax enable
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
-set clipboard=unnamedplus
+if $TMUX == ''
+  set clipboard=unnamedplus
+endif
 
 "" Whitespace
 set nowrap                      " don't wrap lines
@@ -44,6 +46,12 @@ set ofu=syntaxcomplete#Complete
 let g:rubycomplete_buffer_loading = 0
 let g:rubycomplete_classes_in_global = 1
 
+if has("autocmd")
+  autocmd FileType ruby set omnifunc=rubycomplete#Complete
+  autocmd FileType ruby let g:rubycomplete_buffer_loading=1
+  autocmd FileType ruby let g:rubycomplete_classes_in_global=1
+endif
+
  " let Vundle manage Vundle
  " required! 
  Bundle 'gmarik/vundle'
@@ -63,11 +71,11 @@ let g:rubycomplete_classes_in_global = 1
  Bundle 'mileszs/ack.vim'
  Bundle 'jgdavey/tslime.vim'
  Bundle 'jgdavey/vim-turbux'
- Bundle 'rson/vim-conque'
  Bundle 'altercation/vim-colors-solarized'
  Bundle 'mattsa/vim-eddie'
  Bundle 'tsaleh/vim-align'
  Bundle 'kien/ctrlp.vim'
+ Bundle 'derekwyatt/vim-scala'
 
 " snipmate 
 " Install dependencies:
