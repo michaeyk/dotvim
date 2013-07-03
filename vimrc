@@ -3,7 +3,8 @@ set colorcolumn=80
 
 set number
 set nocompatible
-syntax enable
+" syntax enable
+syntax on
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
@@ -36,7 +37,7 @@ set statusline+=%10((%l,%c)%)\            " line and column
 set statusline+=%P                        " percentage of file
 
 " colorsheme 
-colorscheme ir_black
+colorscheme tango
 
 set rtp+=~/.vim/bundle/vundle/
  call vundle#rc()
@@ -72,10 +73,10 @@ endif
  Bundle 'jgdavey/tslime.vim'
  Bundle 'jgdavey/vim-turbux'
  Bundle 'altercation/vim-colors-solarized'
- Bundle 'mattsa/vim-eddie'
  Bundle 'tsaleh/vim-align'
  Bundle 'kien/ctrlp.vim'
  Bundle 'derekwyatt/vim-scala'
+
 
 " snipmate 
 " Install dependencies:
