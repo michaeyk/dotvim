@@ -37,7 +37,7 @@ set statusline+=%10((%l,%c)%)\            " line and column
 set statusline+=%P                        " percentage of file
 
 " colorsheme 
-colorscheme tango
+colorscheme railscasts2
 
 set rtp+=~/.vim/bundle/vundle/
  call vundle#rc()
@@ -75,6 +75,7 @@ endif
  Bundle 'altercation/vim-colors-solarized'
  Bundle 'tsaleh/vim-align'
  Bundle 'kien/ctrlp.vim'
+ Bundle 'tacahiroy/ctrlp-funky' 
  Bundle 'derekwyatt/vim-scala'
 
 
@@ -153,6 +154,11 @@ nmap <Leader>b <C-^>
 
 " ,sh shell window
 nmap <Leader>sh :ConqueTermSplit zsh<cr>
+
+" ctrl-p 
+let g:ctrlp_extensions = ['funky']
+nnoremap <Leader>f :CtrlPFunky<Cr>
+nnoremap <Leader>b :CtrlPBuffer<Cr>
 
 map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
 
