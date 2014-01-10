@@ -155,10 +155,28 @@ nmap <Leader>b <C-^>
 " ,sh shell window
 nmap <Leader>sh :ConqueTermSplit zsh<cr>
 
-" ctrl-p 
-let g:ctrlp_extensions = ['funky']
-nnoremap <Leader>f :CtrlPFunky<Cr>
-nnoremap <Leader>b :CtrlPBuffer<Cr>
+
+" CtrlP Settings
+let g:ctrlp_switch_buffer = 'E'
+let g:ctrlp_tabpage_position = 'c'
+let g:ctrlp_working_path_mode = 'rc'
+let g:ctrlp_root_markers = ['.project.root']
+let g:ctrlp_custom_ignore = '\v%(/\.%(git|hg|svn)|\.%(class|o|png|jpg|jpeg|bmp|tar|jar|tgz|deb|zip)$|/target/)'
+let g:ctrlp_open_new_file = 'r'
+let g:ctrlp_open_multiple_files = '1ri'
+let g:ctrlp_match_window = 'max:40'
+let g:ctrlp_prompt_mappings = {
+  \ 'PrtSelectMove("j")': ['<c-n>'],
+    \ 'PrtSelectMove("k")': ['<c-p>'],
+      \ 'PrtHistory(-1)': ['<c-j>', '<down>'],
+        \ 'PrtHistory(1)': ['<c-i>', '<up>']
+        \ }
+        map ,fb :CtrlPBuffer<cr>
+        map ,ff :CtrlP .<cr>
+        map ,fr :CtrlP<cr>
+        map ,fm :CtrlPMixed<cr>
+
+        
 
 map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
 
