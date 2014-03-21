@@ -50,6 +50,9 @@ set ofu=syntaxcomplete#Complete
 let g:rubycomplete_buffer_loading = 0
 let g:rubycomplete_classes_in_global = 1
 
+" ctags
+set tags=tags;/
+
 if has("autocmd")
   autocmd FileType ruby set omnifunc=rubycomplete#Complete
   autocmd FileType ruby let g:rubycomplete_buffer_loading=1
@@ -80,6 +83,8 @@ endif
  Bundle 'kien/ctrlp.vim'
  Bundle 'tacahiroy/ctrlp-funky' 
  Bundle 'derekwyatt/vim-scala'
+ Bundle 'Shougo/neocomplcache.vim'
+ Bundle 'christoomey/vim-tmux-navigator'
 
 
 " snipmate 
@@ -106,7 +111,14 @@ Bundle "garbas/vim-snipmate"
 
 "" Keybindings 
 
-let mapleader = ","
+let mapleader = "\<Space>"
+
+" Open a new file
+nnoremap <Leader>o :CtrlP<CR> 
+" Save a file 
+nnoremap <Leader>w :w<CR> 
+" Visual line mode 
+nmap <Leader><Leader> V
 
 " Easy window navigation
 map <C-h> <C-w>h
@@ -157,6 +169,8 @@ nmap <Leader>b <C-^>
 
 " ,sh shell window
 nmap <Leader>sh :ConqueTermSplit zsh<cr>
+
+command -nargs=1 WriteEncrypted w !gpg -c -o <q-args>
 
 
 " CtrlP Settings
