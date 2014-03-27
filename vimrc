@@ -73,6 +73,7 @@ endif
  Bundle 'tpope/vim-endwise'
  Bundle 'tpope/vim-ragtag'
  Bundle 'tpope/vim-rails'
+ Bundle 'tpope/dispatch'
  Bundle 'vim-ruby/vim-ruby'
  Bundle 'mattn/gist-vim'
  Bundle 'mileszs/ack.vim'
