@@ -150,10 +150,22 @@ nmap <silent> <C-N> :silent noh<CR>
 " to directory of current file - http://vimcasts.org/e/14
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
-" Fugitive
-" ,g for Ggrep
-nmap <leader>g :Ggrep
-autocmd BufReadPost fugitive://* set bufhidden=delete
+" fugitive git bindings
+nnoremap <Leader>ga :Git add %:p<CR><CR>
+nnoremap <Leader>gs :Gstatus<CR>
+nnoremap <Leader>gc :Gcommit -v -q<CR>
+nnoremap <Leader>gt :Gcommit -v -q %:p<CR>
+nnoremap <Leader>gd :Gdiff<CR>
+nnoremap <Leader>ge :Gedit<CR>
+nnoremap <Leader>gr :Gread<CR>
+nnoremap <Leader>gw :Gwrite<CR><CR>
+nnoremap <Leader>gl :silent! Glog<CR>:bot copen<CR>
+nnoremap <Leader>gp :Ggrep<Space>
+nnoremap <Leader>gm :Gmove<Space>
+nnoremap <Leader>gb :Git branch<Space>
+nnoremap <Leader>go :Git checkout<Space>
+nnoremap <Leader>gps :Dispatch! git push<CR>
+nnoremap <Leader>gpl :Dispatch! git pull<CR>
 
 " ,f for global git serach for word under the cursor (with highlight)
 nmap <leader>f :let @/="\\<<C-R><C-W>\\>"<CR>:set hls<CR>:silent Ggrep -w "<C-R><C-W>"<CR>:ccl<CR>:cw<CR><CR>
@@ -166,9 +178,6 @@ nmap <leader>k :Ack
 
 " ,b to switch to last buffer
 nmap <Leader>b <C-^>
-
-" ,sh shell window
-nmap <Leader>sh :ConqueTermSplit zsh<cr>
 
 command -nargs=1 WriteEncrypted w !gpg -c -o <q-args>
 
@@ -188,10 +197,10 @@ let g:ctrlp_prompt_mappings = {
       \ 'PrtHistory(-1)': ['<c-j>', '<down>'],
         \ 'PrtHistory(1)': ['<c-i>', '<up>']
         \ }
-        map ,fb :CtrlPBuffer<cr>
-        map ,ff :CtrlP .<cr>
-        map ,fr :CtrlP<cr>
-        map ,fm :CtrlPMixed<cr>
+        map <Leader>fb :CtrlPBuffer<cr>
+        map <Leader>ff :CtrlP .<cr>
+        map <Leader>fr :CtrlP<cr>
+        map <Leader>fm :CtrlPMixed<cr>
 
         
 
