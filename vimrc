@@ -27,6 +27,12 @@ set incsearch                   " incremental searching
 set ignorecase                  " searches are case insensitive...
 set smartcase                   " ... unless they contain at least one capital letter
 
+" folding settings
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        
+set foldlevel=1        
+
 "" Set region to US English
 set spelllang=en_us
 
@@ -112,7 +118,7 @@ Bundle "garbas/vim-snipmate"
 
 "" Keybindings 
 
-let mapleader = "\<Space>"
+let mapleader = ","
 
 " Open a new file
 nnoremap <Leader>o :CtrlP<CR> 
@@ -150,6 +156,18 @@ nmap <silent> <C-N> :silent noh<CR>
 " double percentage sign in command mode is expanded
 " to directory of current file - http://vimcasts.org/e/14
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+" Space to toggle folds.
+nnoremap <Space> za
+vnoremap <Space> za
+"
+" "Refocus" folds
+nnoremap ,z zMzvzz
+
+" Make zO recursively open whatever top level fold we're in, no matter where
+" the cursor happens to be.
+nnoremap zO zCzO
+
 
 " fugitive git bindings
 nnoremap <Leader>ga :Git add %:p<CR><CR>
