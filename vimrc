@@ -6,6 +6,8 @@ call matchadd('ColorColumn', '\%81v', 100)
 
 set number
 set nocompatible
+set magic 
+
 " syntax enable
 syntax on
 set encoding=utf-8
@@ -46,7 +48,8 @@ set statusline+=%10((%l,%c)%)\            " line and column
 set statusline+=%P                        " percentage of file
 
 " colorsheme 
-colorscheme railscasts2
+" colorscheme solarized
+" set background=dark
 
 set rtp+=~/.vim/bundle/vundle/
  call vundle#rc()
@@ -79,7 +82,7 @@ endif
  Bundle 'tpope/vim-endwise'
  Bundle 'tpope/vim-ragtag'
  Bundle 'tpope/vim-rails'
- Bundle 'tpope/dispatch'
+ Bundle 'tpope/vim-dispatch'
  Bundle 'vim-ruby/vim-ruby'
  Bundle 'mattn/gist-vim'
  Bundle 'mileszs/ack.vim'
