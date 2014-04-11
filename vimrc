@@ -149,6 +149,12 @@ map <C-l> <C-w>l
 map <S-j> :bn<CR> 
 map <S-k> :bp<CR> 
 
+" Tabs 
+nnoremap t :tabnew<CR>
+nnoremap <S-h> gT
+nnoremap <S-l> gt
+
+
 " cnext / cprev
 map <f1> :cprev<CR>
 map <f2> :cnext<CR>
