@@ -104,6 +104,8 @@ endif
  Bundle 'derekwyatt/vim-scala'
  Bundle 'Shougo/neocomplcache.vim'
  Bundle 'christoomey/vim-tmux-navigator'
+ Bundle 'jamessan/vim-gnupg'
+
 
 
 " snipmate 
