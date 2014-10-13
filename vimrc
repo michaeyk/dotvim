@@ -104,6 +104,7 @@ endif
  Bundle 'jamessan/vim-gnupg'
  Bundle 'Shougo/neocomplcache.vim'
  Bundle 'Shougo/vimproc.vim'
+ Bundle 'Shougo/neomru.vim'
  Bundle 'Shougo/unite.vim'
 
 
@@ -228,14 +229,6 @@ nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file
 nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline -start-insert outline<cr>
 nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank    history/yank<cr>
 nnoremap <leader>e :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
-
-" Custom mappings for the unite buffer
-autocmd FileType unite call s:unite_settings()
-function! s:unite_settings()
-  " Enable navigation with control-j and control-k in insert mode
-  imap <buffer> <C-j>   <Plug>(unite_select_next_line)
-  imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
-endfunction
 
 map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
 
