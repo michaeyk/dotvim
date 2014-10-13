@@ -99,12 +99,11 @@ endif
  Bundle 'jgdavey/vim-turbux'
  Bundle 'altercation/vim-colors-solarized'
  Bundle 'tsaleh/vim-align'
- Bundle 'kien/ctrlp.vim'
- Bundle 'tacahiroy/ctrlp-funky' 
  Bundle 'derekwyatt/vim-scala'
- Bundle 'Shougo/neocomplcache.vim'
  Bundle 'christoomey/vim-tmux-navigator'
  Bundle 'jamessan/vim-gnupg'
+ Bundle 'Shougo/neocomplcache.vim'
+ Bundle 'Shougo/unite.vim'
 
 
 
@@ -117,7 +116,6 @@ Bundle "garbas/vim-snipmate"
 
  " vim-scripts repos
  " non github repos
- " Bundle 'git://git.wincent.com/command-t.git'
 
  filetype plugin indent on     " required! 
  "
@@ -135,7 +133,7 @@ Bundle "garbas/vim-snipmate"
 let mapleader = ","
 
 " Open a new file
-nnoremap <Leader>o :CtrlP<CR> 
+" nnoremap <Leader>o :CtrlP<CR> 
 " Save a file 
 nnoremap <Leader>w :w<CR> 
 " Visual line mode 
@@ -188,7 +186,6 @@ nnoremap ,z zMzvzz
 " the cursor happens to be.
 nnoremap zO zCzO
 
-
 " fugitive git bindings
 nnoremap <Leader>ga :Git add %:p<CR><CR>
 nnoremap <Leader>gs :Gstatus<CR>
@@ -220,28 +217,15 @@ nmap <Leader>b <C-^>
 
 command -nargs=1 WriteEncrypted w !gpg -c -o <q-args>
 
-
-" CtrlP Settings
-let g:ctrlp_switch_buffer = 'E'
-let g:ctrlp_tabpage_position = 'c'
-let g:ctrlp_working_path_mode = 'rc'
-let g:ctrlp_root_markers = ['.project.root']
-let g:ctrlp_custom_ignore = '\v%(/\.%(git|hg|svn)|\.%(class|o|png|jpg|jpeg|bmp|tar|jar|tgz|deb|zip)$|/target/)'
-let g:ctrlp_open_new_file = 'r'
-let g:ctrlp_open_multiple_files = '1ri'
-let g:ctrlp_match_window = 'max:40'
-let g:ctrlp_prompt_mappings = {
-  \ 'PrtSelectMove("j")': ['<c-n>'],
-    \ 'PrtSelectMove("k")': ['<c-p>'],
-      \ 'PrtHistory(-1)': ['<c-j>', '<down>'],
-        \ 'PrtHistory(1)': ['<c-i>', '<up>']
-        \ }
-        map <Leader>fb :CtrlPBuffer<cr>
-        map <Leader>ff :CtrlP .<cr>
-        map <Leader>fr :CtrlP<cr>
-        map <Leader>fm :CtrlPMixed<cr>
-
-        
+" Unite
+let g:unite_source_history_yank_enable = 1
+call unite#filters#matcher_default#use(['matcher_fuzzy'])
+nnoremap <leader>t :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async:!<cr>
+nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files   -start-insert file<cr>
+nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
+nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline -start-insert outline<cr>
+nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank    history/yank<cr>
+nnoremap <leader>e :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
 
 map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
 
