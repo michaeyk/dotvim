@@ -1,4 +1,4 @@
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+" set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 " highlight 81 column
 highlight ColorColumn ctermbg=magenta
@@ -46,15 +46,10 @@ highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
 
-
-"" statusline 
-set statusline=
-set statusline+=%<\                       " cut at start
-set statusline+=%2*[%n%H%M%R%W]%*\        " flags and buf no
-set statusline+=%-40f\                    " path
-set statusline+=%=%1*%y%*%*\              " file type
-set statusline+=%10((%l,%c)%)\            " line and column
-set statusline+=%P                        " percentage of file
+" Airline
+let g:airline_theme             = 'powerlineish'
+let g:airline_enable_branch     = 1
+let g:airline_enable_syntastic  = 1
 
 " colorsheme 
 " colorscheme solarized
@@ -102,12 +97,11 @@ endif
  Bundle 'derekwyatt/vim-scala'
  Bundle 'christoomey/vim-tmux-navigator'
  Bundle 'jamessan/vim-gnupg'
+ Bundle 'bling/vim-airline'
  Bundle 'Shougo/neocomplcache.vim'
  Bundle 'Shougo/vimproc.vim'
  Bundle 'Shougo/neomru.vim'
  Bundle 'Shougo/unite.vim'
-
-
 
 " snipmate 
 " Install dependencies:
@@ -134,8 +128,6 @@ Bundle "garbas/vim-snipmate"
 
 let mapleader = ","
 
-" Open a new file
-" nnoremap <Leader>o :CtrlP<CR> 
 " Save a file 
 nnoremap <Leader>w :w<CR> 
 " Visual line mode 
@@ -222,13 +214,13 @@ command -nargs=1 WriteEncrypted w !gpg -c -o <q-args>
 " Unite
 let g:unite_source_history_yank_enable = 1
 call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <leader>/ :Unite ack:.<cr>
-nnoremap <leader>t :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async:!<cr>
-nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files   -start-insert file<cr>
-nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
+nnoremap <leader>/ :Unite grep:.<cr>
+nnoremap <leader>t :<C-u>Unite -no-split -buffer-name=files -start-insert file_rec/async:!<cr>
+nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files -start-insert file<cr>
+nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru -start-insert file_mru<cr>
 nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline -start-insert outline<cr>
-nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank    history/yank<cr>
-nnoremap <leader>e :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
+nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank history/yank<cr>
+nnoremap <leader>e :<C-u>Unite -no-split -buffer-name=buffer buffer<cr>
 
 map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
 
