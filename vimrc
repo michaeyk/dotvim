@@ -10,6 +10,9 @@ set magic
 
 " syntax enable
 syntax on
+" colorsheme 
+colo grb256
+
 set encoding=utf-8
 set showcmd                     " display incomplete commands
 filetype plugin indent on       " load file type plugins + indentation
@@ -51,9 +54,6 @@ let g:airline_theme             = 'powerlineish'
 let g:airline_enable_branch     = 1
 let g:airline_enable_syntastic  = 1
 
-" colorsheme 
-" colorscheme solarized
-" set background=dark
 
 set rtp+=~/.vim/bundle/vundle/
  call vundle#rc()
