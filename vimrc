@@ -11,7 +11,7 @@ set magic
 " syntax enable
 syntax on
 " colorsheme 
-colo grb256
+colo railscasts2  
 
 set encoding=utf-8
 set showcmd                     " display incomplete commands
