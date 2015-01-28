@@ -133,6 +133,13 @@ nnoremap <Leader>w :w<CR>
 " Visual line mode 
 nmap <Leader><Leader> V
 
+" Easy window split
+" window
+nmap <leader>sh  :topleft  vnew<CR>
+nmap <leader>sl :botright vnew<CR>
+nmap <leader>sk    :topleft  new<CR>
+nmap <leader>sj  :botright new<CR>
+
 " Easy window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
