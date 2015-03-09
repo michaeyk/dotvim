@@ -102,6 +102,8 @@ endif
  Bundle 'Shougo/vimproc.vim'
  Bundle 'Shougo/neomru.vim'
  Bundle 'Shougo/unite.vim'
+ Bundle 'moll/vim-node'
+ Bundle 'pangloss/vim-javascript'
 
 " snipmate 
 " Install dependencies:
