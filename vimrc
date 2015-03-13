@@ -105,6 +105,7 @@ endif
  Bundle 'moll/vim-node'
  Bundle 'pangloss/vim-javascript'
  Bundle 'walm/jshint.vim'
+ Bundle 'ahayman/vim-nodejs-complete'
 
 " snipmate 
 " Install dependencies:
@@ -113,8 +114,6 @@ Bundle "tomtom/tlib_vim"
 Bundle "honza/snipmate-snippets"
 Bundle "garbas/vim-snipmate"
 
- " vim-scripts repos
- " non github repos
 
  filetype plugin indent on     " required! 
  "
@@ -152,12 +151,6 @@ map <C-l> <C-w>l
 " Easy buffer switching
 map <S-j> :bn<CR> 
 map <S-k> :bp<CR> 
-
-" Tabs 
-nnoremap t :tabnew<CR>
-nnoremap <S-h> gT
-nnoremap <S-l> gt
-
 
 " cnext / cprev
 map <f1> :cprev<CR>
