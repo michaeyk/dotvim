@@ -104,6 +104,7 @@ endif
  Bundle 'Shougo/unite.vim'
  Bundle 'moll/vim-node'
  Bundle 'pangloss/vim-javascript'
+ Bundle 'walm/jshint.vim'
 
 " snipmate 
 " Install dependencies:
