@@ -11,7 +11,7 @@ set magic
 " syntax enable
 syntax on
 " colorsheme 
-colo railscasts2  
+colo moria  
 
 set encoding=utf-8
 set showcmd                     " display incomplete commands
@@ -87,6 +87,7 @@ endif
  Bundle 'tpope/vim-ragtag'
  Bundle 'tpope/vim-rails'
  Bundle 'tpope/vim-dispatch'
+ Bundle 'tpope/vim-obsession'
  Bundle 'vim-ruby/vim-ruby'
  Bundle 'mattn/gist-vim'
  Bundle 'mileszs/ack.vim'

@@ -1,11 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/mike/projects/rubylearning'
-let g:netrw_dirhist_2='/var/tmp'
-let g:netrw_dirhist_3='/var'
-let g:netrw_dirhist_4='/'
-let g:netrw_dirhist_5='/home'
-let g:netrw_dirhist_6='/home/mike'
-let g:netrw_dirhist_7='/home/mike/tmp'
-let g:netrw_dirhist_8='/home/mike/dev/smartcall'
-let g:netrw_dirhist_9='/home/mike/dev/smartcall/config'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/mike/projects/clflat/client/scripts'
+let g:netrw_dirhist_2='/home/mike/projects/clflat/client/scripts/page'
+let g:netrw_dirhist_3='/home/mike/projects/clflat/client/scripts'
