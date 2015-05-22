@@ -208,6 +208,8 @@ nmap <leader>k :Ack
 " ,b to switch to last buffer
 nmap <Leader>b <C-^>
 
+inoremap jj <ESC>
+
 command -nargs=1 WriteEncrypted w !gpg -c -o <q-args>
 
 " Unite
