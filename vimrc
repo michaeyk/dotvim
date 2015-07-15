@@ -11,7 +11,7 @@ set magic
 " syntax enable
 syntax on
 " colorsheme 
-colo moria  
+colo tango2
 
 set encoding=utf-8
 set showcmd                     " display incomplete commands
@@ -50,10 +50,9 @@ highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
 
 " Airline
-let g:airline_theme             = 'powerlineish'
-let g:airline_enable_branch     = 1
-let g:airline_enable_syntastic  = 1
-
+let g:airline_theme = 'luna'
+let g:airline#extensions#branch#enabled = 1
+set laststatus=2
 
 set rtp+=~/.vim/bundle/vundle/
  call vundle#rc()
