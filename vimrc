@@ -5,6 +5,7 @@ highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
 
 set number
+set relativenumber
 set nocompatible
 set magic 
 
