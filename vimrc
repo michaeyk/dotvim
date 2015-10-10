@@ -21,6 +21,8 @@ if $TMUX == ''
   set clipboard=unnamedplus
 endif
 
+set path=.,**
+
 "" Whitespace
 set nowrap                      " don't wrap lines
 set tabstop=2 shiftwidth=2      " a tab is two spaces (change this to your linking)
@@ -64,7 +66,7 @@ let g:rubycomplete_buffer_loading = 0
 let g:rubycomplete_classes_in_global = 1
 
 " ctags
-set tags=tags;/
+set tags=tags;
 
 if has("autocmd")
   autocmd FileType ruby set omnifunc=rubycomplete#Complete
@@ -133,8 +135,12 @@ let mapleader = ","
 
 " Save a file 
 nnoremap <Leader>w :w<CR> 
+
 " Visual line mode 
 nmap <Leader><Leader> V
+
+" fly between buffers
+nnoremap <leader>l :ls<CR>:b<space>
 
 " Easy window split
 " window
@@ -149,13 +155,10 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" Easy buffer switching
-map <S-j> :bn<CR> 
-map <S-k> :bp<CR> 
-
 " cnext / cprev
 map <f1> :cprev<CR>
 map <f2> :cnext<CR>
+
 
 " w!! to write as root
 cmap w!! w !sudo tee % >/dev/null
