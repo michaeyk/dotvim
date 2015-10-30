@@ -8,6 +8,7 @@ set number
 set relativenumber
 set nocompatible
 set magic 
+set pastetoggle=<F3>
 
 " syntax enable
 syntax on
