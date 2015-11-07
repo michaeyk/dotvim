@@ -13,7 +13,7 @@ set pastetoggle=<F3>
 " syntax enable
 syntax on
 " colorsheme 
-colo tango2
+colo gruvbox
 
 set encoding=utf-8
 set showcmd                     " display incomplete commands
