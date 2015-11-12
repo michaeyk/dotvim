@@ -65,6 +65,7 @@ set rtp+=~/.vim/bundle/vundle/
 set ofu=syntaxcomplete#Complete
 let g:rubycomplete_buffer_loading = 0
 let g:rubycomplete_classes_in_global = 1
+let g:SuperTabDefaultCompletionType = "context"
 
 " ctags
 set tags=tags;
@@ -110,6 +111,8 @@ endif
  Bundle 'pangloss/vim-javascript'
  Bundle 'walm/jshint.vim'
  Bundle 'ahayman/vim-nodejs-complete'
+ Bundle 'Raimondi/delimitMate'
+ Bundle 'ervandew/supertab'
 
 " snipmate 
 " Install dependencies:
