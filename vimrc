@@ -74,7 +74,10 @@ if has("autocmd")
   autocmd FileType ruby set omnifunc=rubycomplete#Complete
   autocmd FileType ruby let g:rubycomplete_buffer_loading=1
   autocmd FileType ruby let g:rubycomplete_classes_in_global=1
+  autocmd FileType html,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
+  autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
 endif
+
 
  " let Vundle manage Vundle
  " required! 
@@ -113,6 +116,7 @@ endif
  Bundle 'ahayman/vim-nodejs-complete'
  Bundle 'Raimondi/delimitMate'
  Bundle 'ervandew/supertab'
+ Bundle 'docunext/closetag.vim'
 
 " snipmate 
 " Install dependencies:
