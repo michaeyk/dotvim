@@ -61,26 +61,12 @@ set laststatus=2
 set rtp+=~/.vim/bundle/vundle/
  call vundle#rc()
 
-" omni completion settings
-set ofu=syntaxcomplete#Complete
-let g:rubycomplete_buffer_loading = 0
-let g:rubycomplete_classes_in_global = 1
-let g:SuperTabDefaultCompletionType = "context"
-
 " ctags
 set tags=tags;
 
-if has("autocmd")
-  autocmd FileType ruby set omnifunc=rubycomplete#Complete
-  autocmd FileType ruby let g:rubycomplete_buffer_loading=1
-  autocmd FileType ruby let g:rubycomplete_classes_in_global=1
-  autocmd FileType html,htmldjango,jinjahtml,eruby,mako source ~/.vim/bundle/closetag.vim/plugin/closetag.vim
-  autocmd FileType html,htmldjango,jinjahtml,eruby,mako let b:closetag_html_style=1
-endif
-
-
  " let Vundle manage Vundle
  " required! 
+filetype off
  Bundle 'gmarik/vundle'
 
  " My Bundles here:
@@ -106,25 +92,16 @@ endif
  Bundle 'christoomey/vim-tmux-navigator'
  Bundle 'jamessan/vim-gnupg'
  Bundle 'bling/vim-airline'
- Bundle 'Shougo/neocomplcache.vim'
  Bundle 'Shougo/vimproc.vim'
  Bundle 'Shougo/neomru.vim'
  Bundle 'Shougo/unite.vim'
  Bundle 'moll/vim-node'
  Bundle 'pangloss/vim-javascript'
  Bundle 'walm/jshint.vim'
- Bundle 'ahayman/vim-nodejs-complete'
  Bundle 'Raimondi/delimitMate'
- Bundle 'ervandew/supertab'
  Bundle 'docunext/closetag.vim'
-
-" snipmate 
-" Install dependencies:
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "honza/vim-snippets"
-Bundle "garbas/vim-snipmate"
-
+ Bundle 'Valloric/YouCompleteMe'
+ Bundle 'SirVer/ultisnips'
 
  filetype plugin indent on     " required! 
  "
@@ -166,7 +143,6 @@ map <C-l> <C-w>l
 " cnext / cprev
 map <f1> :cprev<CR>
 map <f2> :cnext<CR>
-
 
 " w!! to write as root
 cmap w!! w !sudo tee % >/dev/null
@@ -222,6 +198,12 @@ nmap <Leader>b <C-^>
 inoremap jj <ESC>
 
 command -nargs=1 WriteEncrypted w !gpg -c -o <q-args>
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger="<c-j>"
+" let g:UltiSnipsJumpForwardTrigger="<c-j>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+" let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 
 " Unite
 let g:unite_source_history_yank_enable = 1
