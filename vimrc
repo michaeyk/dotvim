@@ -92,6 +92,7 @@ filetype off
  Bundle 'christoomey/vim-tmux-navigator'
  Bundle 'jamessan/vim-gnupg'
  Bundle 'bling/vim-airline'
+ Bundle 'vim-airline/vim-airline-themes'
  Bundle 'Shougo/vimproc.vim'
  Bundle 'Shougo/neomru.vim'
  Bundle 'Shougo/unite.vim'
