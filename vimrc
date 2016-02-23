@@ -103,6 +103,7 @@ filetype off
  Bundle 'docunext/closetag.vim'
  Bundle 'Valloric/YouCompleteMe'
  Bundle 'SirVer/ultisnips'
+ Bundle 'vimwiki/vimwiki'
 
  filetype plugin indent on     " required! 
  "
