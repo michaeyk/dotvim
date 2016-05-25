@@ -13,7 +13,7 @@ set pastetoggle=<F3>
 " syntax enable
 syntax on
 " colorsheme 
-colo tango2
+colo solarized
 
 set encoding=utf-8
 set showcmd                     " display incomplete commands
@@ -104,6 +104,7 @@ filetype off
  Bundle 'Valloric/YouCompleteMe'
  Bundle 'SirVer/ultisnips'
  Bundle 'vimwiki/vimwiki'
+ Bundle 'flazz/vim-colorschemes'
 
  filetype plugin indent on     " required! 
  "
