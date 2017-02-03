@@ -13,7 +13,7 @@ set pastetoggle=<F3>
 " syntax enable
 syntax on
 " colorsheme 
-colo solarized
+colo gruvbox
 
 set encoding=utf-8
 set showcmd                     " display incomplete commands
@@ -105,6 +105,7 @@ filetype off
  Bundle 'SirVer/ultisnips'
  Bundle 'vimwiki/vimwiki'
  Bundle 'flazz/vim-colorschemes'
+ Bundle 'sirtaj/vim-openscad'
 
  filetype plugin indent on     " required! 
  "
