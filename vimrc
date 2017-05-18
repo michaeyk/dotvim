@@ -107,7 +107,7 @@ filetype off
  Bundle 'flazz/vim-colorschemes'
  Bundle 'sirtaj/vim-openscad'
  Bundle 'dylanaraps/wal'
- Bundle 'jplaut/vim-arduino-ino'
+ Bundle 'stevearc/vim-arduino'
 
  filetype plugin indent on     " required! 
  "
