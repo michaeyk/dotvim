@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/mike/.vim'
-let g:netrw_dirhist_2='/home/mike/Sync/documents/vimwiki/diary'
-let g:netrw_dirhist_3='/home/mike/Arduino/sketch_may17b'
+let g:netrw_dirhist_1='/home/mike/code/vue2_udemy/Start/src'
+let g:netrw_dirhist_2='/home/mike/Downloads/Section Code (Start)/src'
+let g:netrw_dirhist_3='/home/mike/Downloads/Section Code (Start)/src/components'

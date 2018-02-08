@@ -108,6 +108,9 @@ filetype off
  Bundle 'sirtaj/vim-openscad'
  Bundle 'dylanaraps/wal'
  Bundle 'stevearc/vim-arduino'
+ Bundle 'posva/vim-vue'
+ Bundle 'davidhalter/jedi-vim'
+
 
  filetype plugin indent on     " required! 
  "
