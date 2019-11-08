@@ -64,6 +64,18 @@ set rtp+=~/.vim/bundle/vundle/
 " ctags
 set tags=tags;
 
+" VimWiki
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+
+command! Diary VimwikiDiaryIndex
+augroup vimwikigroup
+    autocmd!
+    " automatically update links on read diary
+    autocmd BufRead,BufNewFile diary.md VimwikiDiaryGenerateLinks
+augroup end
+
+
  " let Vundle manage Vundle
  " required! 
 filetype off
@@ -82,6 +94,7 @@ filetype off
  Bundle 'tpope/vim-dispatch'
  Bundle 'tpope/vim-obsession'
  Bundle 'vim-ruby/vim-ruby'
+ Bundle 'mattn/calendar-vim'
  Bundle 'mattn/gist-vim'
  Bundle 'mileszs/ack.vim'
  Bundle 'jgdavey/tslime.vim'
@@ -110,7 +123,6 @@ filetype off
  Bundle 'stevearc/vim-arduino'
  Bundle 'posva/vim-vue'
  Bundle 'davidhalter/jedi-vim'
-
 
  filetype plugin indent on     " required! 
  "
@@ -142,6 +154,12 @@ nmap <leader>sh  :topleft  vnew<CR>
 nmap <leader>sl :botright vnew<CR>
 nmap <leader>sk    :topleft  new<CR>
 nmap <leader>sj  :botright new<CR>
+
+" Use hjkl-movement between rows when soft wrapping
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 
 " Easy window navigation
 map <C-h> <C-w>h
@@ -226,3 +244,6 @@ nnoremap <leader>e :<C-u>Unite -no-split -buffer-name=buffer buffer<cr>
 
 map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
 
+xnoremap "+y y:call system("wl-copy", @")<cr>
+nnoremap "+p :let @"=substitute(system("wl-paste --no-newline"), '<C-v><C-m>', '', 'g')<cr>p
+nnoremap "*p :let @"=substitute(system("wl-paste --no-newline --primary"), '<C-v><C-m>', '', 'g')<cr>p

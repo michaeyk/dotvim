@@ -1,5 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/mike/code/vue2_udemy/Start/src'
-let g:netrw_dirhist_2='/home/mike/Downloads/Section Code (Start)/src'
-let g:netrw_dirhist_3='/home/mike/Downloads/Section Code (Start)/src/components'
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/mike/.config/sway'
+let g:netrw_dirhist_0='/home/mike/.vim/ftplugin'
+let g:netrw_dirhist_9='/tmp/systemd-private-9b9675c68e4d4728861fba423debe7d5-systemd-logind.service-xeKRzz'
+let g:netrw_dirhist_8='/home/mike/.config/sway'
+let g:netrw_dirhist_7='/etc/X11/xinit'
+let g:netrw_dirhist_6='/home/mike/.config'
+let g:netrw_dirhist_5='/home/mike/dotfiles/mutt/mutt-colors-solarized'
+let g:netrw_dirhist_4='/home/mike/.config/i3'
+let g:netrw_dirhist_3='/home/mike/.config/polybar'
+let g:netrw_dirhist_2='/home/mike/.config/yay'
