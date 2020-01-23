@@ -8,12 +8,15 @@ set number
 set relativenumber
 set nocompatible
 set magic 
+set path=.,**
+set wildmenu
+set wildmode=longest:list,full
 set pastetoggle=<F3>
 
 " syntax enable
 syntax on
 " colorsheme 
-" colo wal
+colo tango
 
 set encoding=utf-8
 set showcmd                     " display incomplete commands
@@ -21,8 +24,6 @@ filetype plugin indent on       " load file type plugins + indentation
 if $TMUX == ''
   set clipboard=unnamedplus
 endif
-
-set path=.,**
 
 "" Whitespace
 set nowrap                      " don't wrap lines
@@ -74,7 +75,6 @@ augroup vimwikigroup
     " automatically update links on read diary
     autocmd BufRead,BufNewFile diary.md VimwikiDiaryGenerateLinks
 augroup end
-
 
  " let Vundle manage Vundle
  " required! 
