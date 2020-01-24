@@ -43,6 +43,12 @@ set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        
 set foldlevel=1        
 
+" netrw settings
+let g:netrw_liststyle=3
+let g:netrw_banner = 0
+let g:netrw_browse_split = 1
+let g:netrw_winsize = 25
+
 "" Set region to US English
 set spelllang=en_us
 highlight clear SpellBad
@@ -106,9 +112,6 @@ filetype off
  Bundle 'jamessan/vim-gnupg'
  Bundle 'bling/vim-airline'
  Bundle 'vim-airline/vim-airline-themes'
- Bundle 'Shougo/vimproc.vim'
- Bundle 'Shougo/neomru.vim'
- Bundle 'Shougo/unite.vim'
  Bundle 'moll/vim-node'
  Bundle 'pangloss/vim-javascript'
  Bundle 'walm/jshint.vim'
@@ -232,15 +235,6 @@ let g:UltiSnipsExpandTrigger="<c-j>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " let g:UltiSnipsSnippetDirectories=["UltiSnips"]
 
-" Unite
-let g:unite_source_history_yank_enable = 1
-nnoremap <leader>/ :Unite grep:.<cr>
-nnoremap <leader>t :<C-u>Unite -no-split -buffer-name=files -start-insert file_rec/async:!<cr>
-nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files -start-insert file<cr>
-nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru -start-insert file_mru<cr>
-nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline -start-insert outline<cr>
-nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank history/yank<cr>
-nnoremap <leader>e :<C-u>Unite -no-split -buffer-name=buffer buffer<cr>
 
 map <Leader>rt :!ctags --extra=+f --exclude=.git --exclude=log -R * `rvm gemdir`/gems/*<CR><CR>
 
