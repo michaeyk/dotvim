@@ -102,7 +102,6 @@ filetype off
  Bundle 'vim-ruby/vim-ruby'
  Bundle 'mattn/calendar-vim'
  Bundle 'mattn/gist-vim'
- Bundle 'mileszs/ack.vim'
  Bundle 'jgdavey/tslime.vim'
  Bundle 'jgdavey/vim-turbux'
  Bundle 'altercation/vim-colors-solarized'
@@ -126,6 +125,7 @@ filetype off
  Bundle 'stevearc/vim-arduino'
  Bundle 'posva/vim-vue'
  Bundle 'davidhalter/jedi-vim'
+ Bundle 'junegunn/fzf.vim'
 
  filetype plugin indent on     " required! 
  "
@@ -201,6 +201,18 @@ nnoremap ,z zMzvzz
 " the cursor happens to be.
 nnoremap zO zCzO
 
+" fzf bindings
+nnoremap <silent> <Leader><Space> :Files<CR>
+nnoremap <silent> <Leader>. :Files <C-r>=expand("%:h")<CR>/<CR>
+nnoremap <silent> <Leader>b :Buffers<CR>
+
+let g:fzf_commits_log_options = '--graph --color=always
+  \ --format="%C(yellow)%h%C(red)%d%C(reset)
+  \ - %C(bold green)(%ar)%C(reset) %s %C(blue)<%an>%C(reset)"'
+
+nnoremap <silent> <Leader>c  :Commits<CR>
+nnoremap <silent> <Leader>bc :BCommits<CR>
+
 " fugitive git bindings
 nnoremap <Leader>ga :Git add %:p<CR><CR>
 nnoremap <Leader>gs :Gstatus<CR>
@@ -217,13 +229,6 @@ nnoremap <Leader>gb :Git branch<Space>
 nnoremap <Leader>go :Git checkout<Space>
 nnoremap <Leader>gps :Dispatch! git push<CR>
 nnoremap <Leader>gpl :Dispatch! git pull<CR>
-
-" Ack
-" ,k for Ack
-nmap <leader>k :Ack 
-
-" ,b to switch to last buffer
-nmap <Leader>b <C-^>
 
 inoremap jj <ESC>
 
