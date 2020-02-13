@@ -145,9 +145,6 @@ let mapleader = ","
 " Save a file 
 nnoremap <Leader>w :w<CR> 
 
-" Visual line mode 
-nmap <Leader><Leader> V
-
 " fly between buffers
 nnoremap <leader>l :ls<CR>:b<space>
 
@@ -202,9 +199,9 @@ nnoremap ,z zMzvzz
 nnoremap zO zCzO
 
 " fzf bindings
-nnoremap <silent> <Leader><Space> :Files<CR>
+nnoremap <silent> <Leader>o :Files<CR>
 nnoremap <silent> <Leader>. :Files <C-r>=expand("%:h")<CR>/<CR>
-nnoremap <silent> <Leader>b :Buffers<CR>
+nnoremap <silent> <Leader>B :Buffers<CR>
 
 let g:fzf_commits_log_options = '--graph --color=always
   \ --format="%C(yellow)%h%C(red)%d%C(reset)
@@ -212,6 +209,10 @@ let g:fzf_commits_log_options = '--graph --color=always
 
 nnoremap <silent> <Leader>c  :Commits<CR>
 nnoremap <silent> <Leader>bc :BCommits<CR>
+
+" switch to last buffer
+nmap <Leader>b <C-^>
+
 
 " fugitive git bindings
 nnoremap <Leader>ga :Git add %:p<CR><CR>
@@ -229,8 +230,6 @@ nnoremap <Leader>gb :Git branch<Space>
 nnoremap <Leader>go :Git checkout<Space>
 nnoremap <Leader>gps :Dispatch! git push<CR>
 nnoremap <Leader>gpl :Dispatch! git pull<CR>
-
-inoremap jj <ESC>
 
 command -nargs=1 WriteEncrypted w !gpg -c -o <q-args>
 
